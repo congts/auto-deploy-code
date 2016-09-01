@@ -10,22 +10,32 @@ chmod +x deploy.sh
 ```
 By default, the script uses "develop" branch to deploy code automatically.
 To change your branch name, please edit deploy.php file (line 5)
-	$deployBranch = 'develop'; // change your branch
+```
+$deployBranch = 'develop'; // change your branch
+```
 
-Update the webhook in your GIT repository
-	Github: Choose your repository => Setting => Webhooks & services
+Update the webhook into your GIT repository
 
-	Gitlab: Choose your repository => Setting => Web Hooks
+```
+Github: Choose your repository => Setting => Webhooks & services
 
-	Bitbucket: Choose your repository => Setting => INTEGRATIONS => Webhooks
+Gitlab: Choose your repository => Setting => Web Hooks
 
+Bitbucket: Choose your repository => Setting => INTEGRATIONS => Webhooks
+```
 Then add your URL into Webhook information
-	http://yoursite.com/deploy.php
+
+```
+http://yoursite.com/deploy.php
+```
 Content type: "application/json" (if needed)
 Events (Choose push event):
 Which events would you like to trigger this webhook?: "Just the push event."
 
 ### Others
 You can update other actions (clear cache, session, etc) after the code is updated.
-Edit file deploy.sh (line 58)
-	rm -rf var/cache
+Edit file deploy.sh (from line 58)
+
+```
+rm -rf var/cache	
+```
