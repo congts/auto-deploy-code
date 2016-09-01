@@ -4,7 +4,10 @@ This script to deploy (pull and update) code automatically on the develop or pro
 Usage:
 -------
 Upload files deploy.php and deploy.sh to your home directory (Example: ~/public_html)
-	chmod +x deploy.sh
+
+```
+chmod +x deploy.sh
+```
 By default, the script uses "develop" branch to deploy code automatically.
 To change your branch name, please edit deploy.php file (line 5)
 	$deployBranch = 'develop'; // change your branch
