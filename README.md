@@ -9,6 +9,7 @@ Upload files deploy.php and deploy.sh to your home directory (Example: ~/public_
 chmod +x deploy.sh
 ```
 By default, the script uses "develop" branch to deploy code automatically.
+
 To change your branch name, please edit deploy.php file (line 5)
 ```
 $deployBranch = 'develop'; // change your branch
@@ -29,11 +30,14 @@ Then add your URL into Webhook information
 http://yoursite.com/deploy.php
 ```
 Content type: "application/json" (if needed)
+
 Events (Choose push event):
+
 Which events would you like to trigger this webhook?: "Just the push event."
 
 ### Others
 You can update other actions (clear cache, session, etc) after the code is updated.
+
 Edit file deploy.sh (from line 58)
 
 ```
